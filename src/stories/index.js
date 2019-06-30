@@ -6,6 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -19,5 +20,7 @@ storiesOf('Button', module)
     </Button>
   ));
 
-storiesOf('Header', module).add('default', () => <Header/>);
+storiesOf('Header', module)
+	.add('header', () => <Header/>)
+	.add('footer', () => <Footer/>);
 
